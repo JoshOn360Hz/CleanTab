@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CleanTab</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="weather-card" class="card">
+        <img id="weather-icon" src="" alt="Weather Icon" class="weather-icon" style="width: 30%;">
+        <p id="weather-condition"></p>
+        <p id="city-name"></p>
+        <p id="temperature"></p>
+    </div>
+
+    <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Search..." />
+    </div>
+    <div id="shortcuts-container" class="shortcuts-container">
+    </div>
+    <button id="settings-btn" class="settings-btn"><i class="bi bi-gear"></i></button>
+    <button id="upload-btn" class="settings-btn">
+        <i class="bi bi-image"></i> 
+    </button>
+    <input type="file" id="file-input" accept="image/*" />
+
+<div id="settings-modal" class="settings-modal"style="display: none;">
+    <div class="settings-content">
+        <span id="close-settings-btn" class="close-btn" style="display: none;">&times;</span>
+       
+        <label for="api-key">API Key:</label>
+        <input type="text" id="api-key" placeholder="Enter API Key" />
+
+        <label for="city-input">City:</label>
+        <input type="text" id="city-input" placeholder="Enter city name" />
+        <label for="country-input">Country Code:</label>
+        <input type="text" id="country-input" placeholder="Enter country code" />
+
+
+      
+        <label for="shortcut-name">Shortcut Name:</label>
+        <input type="text" id="shortcut-name" placeholder="Name of Shortcut" />
+        
+        <label for="shortcut-url">Shortcut URL:</label>
+        <input type="text" id="shortcut-url" placeholder="https://example.com" />
+
+        <button id="save-shortcut-btn">Add Shortcut</button>
+        <br>
+        <br>
+
+        <button id="save-settings-btn">Save</button>
+    </div>
+</div>
+
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
