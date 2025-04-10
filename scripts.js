@@ -19,6 +19,14 @@ document.addEventListener('DOMContentLoaded', () => {
     
     let apiKey = localStorage.getItem('apiKey') || '';
     let city = localStorage.getItem('city') || 'London';
+    // Retrieve the background image from localStorage (if exists)
+    let backgroundImageUrl = localStorage.getItem('backgroundImage') || '';
+
+// Set the background image if it exists
+    if (backgroundImageUrl) {
+    document.body.style.backgroundImage = backgroundImageUrl;
+}
+
 
     let shortcuts = JSON.parse(localStorage.getItem('shortcuts')) || [];
 
